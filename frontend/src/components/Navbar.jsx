@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import FinalLogo from "../assets/FinalLogo.png";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  const navClass = ({ isActive }) =>
+    `text-xs xl:text-sm transition-all
+     ${isActive ? "text-green-500 underline decoration-2" : "text-black"}
+     hover:text-green-500 hover:underline hover:decoration-2`;
 
   return (
     <nav className="w-full bg-white sticky top-0 z-50">
@@ -20,10 +26,11 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-8 font-medium">
-            <a href="#" className="text-green-500 text-xs xl:text-sm underline decoration-2">Home</a>
-            <a href="#" className="hover:text-green-500">Services</a>
-            <a href="#" className="hover:text-green-500">About Us</a>
-            <a href="#" className="hover:text-green-500">Contact</a>
+
+            <NavLink to="/" className={navClass}>Home</NavLink>
+            <NavLink to="/services" className={navClass}>Services</NavLink>
+            <NavLink to="/about" className={navClass}>About Us</NavLink>
+            <NavLink to="/contact" className={navClass}>Contact</NavLink>
 
             <button className="bg-black text-white px-6 py-2 rounded-md hover:bg-white hover:text-black hover:border transition">
               Let’s Discuss
@@ -33,7 +40,7 @@ export default function Navbar() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden  text-2xl"
+            className="lg:hidden text-2xl"
           >
             ☰
           </button>
@@ -42,12 +49,13 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {open && (
           <div className="lg:hidden flex flex-col gap-4 pb-6 font-medium">
-            <a href="#" className="text-green-500 text-xs">Home</a>
-            <a href="#" className="hover:text-green-500 text-xs">Services</a>
-            <a href="#" className="hover:text-green-500 text-xs">About Us</a>
-            <a href="#" className="hover:text-green-500 text-xs">Contact</a>
 
-            <button className="bg-black text-white px-4 py-2  rounded-md hover:bg-gray-800 w-28 text-xs">
+            <NavLink to="/" className={navClass}>Home</NavLink>
+            <NavLink to="/services" className={navClass}>Services</NavLink>
+            <NavLink to="/about" className={navClass}>About Us</NavLink>
+            <NavLink to="/contact" className={navClass}>Contact</NavLink>
+
+            <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 w-28 text-xs">
               Let’s Discuss
             </button>
           </div>

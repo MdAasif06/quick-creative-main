@@ -1,41 +1,12 @@
-import logo from "../assets/images/logo.png";
+
+import HeroTop from "./HeroTop";
 
 export default function Hero() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="w-full bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-            
-            {/* LEFT */}
-            <div>
-              <h1 className="gradient-text">
-                UNLEASH YOUR CREATIVE IDEA.
-              </h1>
-
-              <p className="mt-6 max-w-md text-black text-base font-medium sm:text-lg">
-                Our efficient and swift design and <br />
-                development processes guarantee <br />
-                high-quality results.
-              </p>
-            </div>
-
-            {/* RIGHT */}
-            <div className="relative flex justify-center md:justify-end">
-              {/* CIRCLE */}
-              <div className="absolute w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full right-0" />
-
-              {/* IMAGE */}
-              <img
-                src={logo}
-                alt="Hero Illustration"
-                className="relative z-10 w-64 sm:w-80 lg:w-196"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+     
+         <HeroTop/>
 
       {/* QUICK CREATIVE SECTION */}
       <section className="flex flex-col items-center justify-center text-center px-4 bg-white py-10 mt-4.5">
