@@ -19,11 +19,11 @@ export default function Hero() {
           presence and expand globally.
         </p>
 
-        <h2 className="font-medium text-2xl mt-6">
-          QuickCreative Presenting our superpowers
+        <h2 className="font-semibold text-3xl mt-20 tracking-wide [word-spacing:2px]">
+          Quick Creative Presenting our superpowers
         </h2>
 
-        <p className="font-light text-[13px] mt-2">
+        <p className="font-semibold text-[13px] mt-2 text-gray-700">
           Using the term ‘services’ feels a bit old-fashioned, doesn’t it?
         </p>
       </section>
