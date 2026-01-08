@@ -10,19 +10,19 @@ export default function ServicesCards() {
         {/* CARD 1 */}
         <div className="text-white">
           <h3 className="text-xl font-semibold mb-4">
-            Web development
+            Web Development
           </h3>
 
-          <p className="text-sm mb-10 max-w-sm">
+          <p className="text-sm mb-14 max-w-sm">
             Creating websites that are easy to use and keep your visitors
             happy and wanting to return.
           </p>
 
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg min-h-screen w-full">
             <img
               src={Apex}
               alt="Web development"
-              className="w-full h-[420px] object-cover"
+              className="object-cover"
             />
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function ServicesCards() {
         {/* CARD 2 */}
         <div className="text-white">
           <h3 className="text-xl font-semibold mb-4">
-            e-commerce development
+            E-Commerce Development
           </h3>
 
           <p className="text-sm mb-10 max-w-sm">
@@ -38,11 +38,11 @@ export default function ServicesCards() {
             really gets sales flowing and helps you grow your profits.
           </p>
 
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg max-h-lvh w-full">
             <img
               src={NkSons}
               alt="E-commerce"
-              className="w-full h-[420px] object-cover"
+              className="object-cover"
             />
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function ServicesCards() {
         {/* CARD 3 */}
         <div className="text-white">
           <h3 className="text-xl font-semibold mb-4">
-            Web application development
+            Web Application Development
           </h3>
 
           <p className="text-sm mb-10 max-w-sm">
@@ -58,11 +58,11 @@ export default function ServicesCards() {
             processes and delight users.
           </p>
 
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg max-h-lvh w-full">
             <img
               src={Rental}
               alt="Web application"
-              className="w-full h-[420px] object-cover"
+              className=" object-cover"
             />
           </div>
         </div>

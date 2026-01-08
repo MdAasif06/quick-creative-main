@@ -17,15 +17,15 @@ export default function CirclularServices() {
   return (
     <div className="w-full bg-white py-20">
       {/* FIXED CANVAS */}
-      <div className="relative w-360 h-225 ">
+      <div className="relative w-360 h-225 text-center">
         {/* HEADING */}
 
-        <h1 className="service-head text-[44px] font-bold leading-tight ml-25">
+        <h1 className="service-head text-[54px] font-bold leading-tight ml-25 ">
           Innovative solutions to <br />
           energise your business.
         </h1>
 
-        <p className="mt-4 w-[520px] text-[16px] text-black font-medium leading-6 ml-25">
+        <p className="mt-8 w-[520px] text-[16px] text-black font-medium leading-6 text-center mx-auto">
           Unlock your business’s full potential with innovative design solutions
           focused on efficiency, modern UI, and growth. Stay ahead of the
           competition with technology that truly drives success.

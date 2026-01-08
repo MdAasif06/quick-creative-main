@@ -12,7 +12,7 @@ import CreativeServices from "./components/CreativeServices";
 import DataAnalystSection from "./components/DataAnalystSection";
 import WhyTrustUs from "./components/WhyTrustUs";
 import CTASection from "./components/CTASection";
-
+import Contact from "./components/Contact"
 
 const App = () => {
   return (
@@ -32,6 +32,7 @@ const App = () => {
               <DataAnalystSection/>
               <CTASection/>
               <WhyTrustUs/>
+              <Contact/>
 
             </>
           }

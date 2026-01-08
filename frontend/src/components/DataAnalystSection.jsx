@@ -3,14 +3,14 @@ import DataAna from '../assets/images/DataAna.jpeg'
 export default function DataAnalystSection() {
   return (
     <div className="w-full bg-white py-20">
-      <div className="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-72 items-center">
 
         {/* LEFT IMAGE */}
-        <div className="bg-white rounded-2xl shadow-lg p-4">
+        <div className="bg-white rounded-2xl shadow-lg p-4 min-w-lvh">
           <img
             src={DataAna}
             alt="Sales Overview Dashboard"
-            className="w-full h-auto rounded-xl"
+            className="w-full rounded-xl"
           />
         </div>
 

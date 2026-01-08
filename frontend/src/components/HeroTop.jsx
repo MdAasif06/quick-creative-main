@@ -9,7 +9,7 @@ export default function HeroTop() {
           {/* LEFT */}
           <div>
             <h1 className="gradient-text">
-              UNLEASH YOUR CREATIVE IDEA.
+              DELIVER THE BEST <br /> PROJECTS IN THE <br /> SHORTEST TIME.
             </h1>
 
             <p className="mt-3 ml-2 max-w-md text-black text-base font-medium sm:text-lg">

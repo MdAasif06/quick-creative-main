@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
 
         <div className="bg-gray-900 text-center py-4 text-sm text-gray-400">
-          © 2025 Quick Creative. All Rights Reserved
+          © 2026 Quick Creative. All Rights Reserved
         </div>
       </footer>
     </>

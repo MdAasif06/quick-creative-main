@@ -7,10 +7,7 @@ body {
   font-style: normal;
   width: 100%;
   height: 100vh;
-  
-  
 }
-
 
 .nav {
   font-size: 1.225rem;
@@ -21,9 +18,9 @@ body {
   font-size: 1.125rem;
 }
 .gradient-text {
-  font-size: 70px; /* adjust as needed */
+  font-size: 60px; /* adjust as needed */
   font-weight: bold;
-  line-height:120%;
+  line-height: 120%;
   background: linear-gradient(120deg, #070000, #20b78c 80%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -41,14 +38,14 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .service-head {
-  background: linear-gradient(271deg,#2CA66C 60%,#282828 );
+  background: linear-gradient(271deg, #6FBF9B,#1F3D2B 60% );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.gradient-text-serice{
+.gradient-text-serice {
   font-size: 52px; /* adjust as needed */
   font-weight: bold;
-  background: linear-gradient(120deg, #000000 0%, #45B293 80%);
+  background: linear-gradient(120deg, #000000 0%, #45b293 80%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

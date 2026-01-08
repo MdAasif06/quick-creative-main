@@ -38,7 +38,7 @@ export default function CreativeServices() {
         {/* CARDS */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           
-          <div className="bg-black rounded-2xl overflow-hidden h-[320px]">
+          <div className="bg-black rounded-2xl overflow-hidden max-h-lvh">
             <img
               src={CreaditCard}
               alt="Poster design"
@@ -46,7 +46,7 @@ export default function CreativeServices() {
             />
           </div>
 
-          <div className="bg-black rounded-2xl overflow-hidden h-[320px]">
+          <div className="bg-black rounded-2xl overflow-hidden max-h-lvh">
             <img
               src={Doctor}
               alt="Creative production"
@@ -54,15 +54,7 @@ export default function CreativeServices() {
             />
           </div>
 
-          <div className="bg-gray-200 rounded-2xl overflow-hidden h-[320px]">
-            <img
-              src={NetClan}
-              alt="UI UX"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="bg-black rounded-2xl overflow-hidden h-[320px]">
+          <div className="bg-black rounded-2xl overflow-hidden max-h-lvh">
             <img
               src={Pyweek}
               alt="Mobile UI"
@@ -70,6 +62,13 @@ export default function CreativeServices() {
             />
           </div>
 
+          <div className="bg-gray-200 rounded-2xl overflow-hidden max-h-lvh">
+            <img
+              src={NetClan}
+              alt="UI UX"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>
