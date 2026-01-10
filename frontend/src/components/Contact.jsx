@@ -1,32 +1,81 @@
+import { useState } from "react";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 
-
 const ContactSection = () => {
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await fetch("https://sheetdb.io/api/v1/m5nqghrooeq3e", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          data: [
+            {
+              name: form.name,
+              company: form.company,
+              email: form.email,
+              mobile: form.mobile,
+              message: form.message,
+              date: new Date().toLocaleString(),
+            },
+          ],
+        }),
+      });
+
+      alert("Message sent successfully!");
+
+      setForm({
+        name: "",
+        company: "",
+        email: "",
+        mobile: "",
+        message: "",
+      });
+    } catch (err) {
+      alert("Something went wrong!");
+    }
+  };
+
   return (
-    <section className="w-full bg-white py-10 px-6 mb-10 mt-0">
+    <section className="w-full bg-white py-10 px-6 mb-10">
       <div className="max-w-6xl mx-auto bg-[#0F3D2E] rounded-2xl p-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
+
           {/* LEFT CARD */}
           <div className="relative bg-[#2F7F67] rounded-2xl p-6 text-white overflow-hidden">
             <h2 className="text-2xl font-bold">Contact us</h2>
             <p className="text-sm mt-1 opacity-90">
-              let’s make magic happen!
+              Let’s make magic happen!
             </p>
 
             <div className="mt-8 space-y-5 text-sm">
               <div className="flex items-center gap-3">
-                <span><FiPhone/></span>
+                <FiPhone />
                 <span>+91 8340648012</span>
               </div>
 
               <div className="flex items-center gap-3">
-                <span><FiMail/></span>
+                <FiMail />
                 <span>demo@gmail.com</span>
               </div>
 
               <div className="flex items-start gap-3">
-                <span><FiMapPin/></span>
+                <FiMapPin />
                 <span>
                   Tolichowki, Near Ruman <br />
                   Hyderabad 500008
@@ -41,19 +90,42 @@ const ContactSection = () => {
 
           {/* RIGHT FORM */}
           <div className="md:col-span-2 text-white">
-            <form className="space-y-8">
-              
+            <form onSubmit={handleSubmit} className="space-y-8">
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input label="Name" />
-                <Input label="Company Name" />
-                <Input label="Email" />
-                <Input label="Mobile Number" />
+                <Input
+                  label="Name"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                />
+                <Input
+                  label="Company Name"
+                  name="company"
+                  value={form.company}
+                  onChange={handleChange}
+                />
+                <Input
+                  label="Email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                />
+                <Input
+                  label="Mobile Number"
+                  name="mobile"
+                  value={form.mobile}
+                  onChange={handleChange}
+                />
               </div>
 
               <div>
                 <label className="text-sm font-medium">Message</label>
                 <input
-                  placeholder="how we can help"
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="How we can help"
                   className="w-full bg-transparent border-b border-white/60 focus:outline-none py-2 mt-2 placeholder:text-white/60"
                 />
               </div>
@@ -64,6 +136,7 @@ const ContactSection = () => {
               >
                 Send Message
               </button>
+
             </form>
           </div>
 
@@ -73,10 +146,11 @@ const ContactSection = () => {
   );
 };
 
-const Input = ({ label }) => (
+const Input = ({ label, ...props }) => (
   <div>
     <label className="text-sm font-medium">{label}</label>
     <input
+      {...props}
       className="w-full bg-transparent border-b border-white/60 focus:outline-none py-2 mt-2"
     />
   </div>

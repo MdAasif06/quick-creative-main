@@ -13,6 +13,7 @@ import DataAnalystSection from "./components/DataAnalystSection";
 import WhyTrustUs from "./components/WhyTrustUs";
 import CTASection from "./components/CTASection";
 import Contact from "./components/Contact"
+import About from "./Pages/About";
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
           }
         />
         <Route path="/services" element={<ServicesSection />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </BrowserRouter>

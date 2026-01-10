@@ -32,7 +32,7 @@ export default function CirclularServices() {
         </p>
 
         {/* DOTTED CIRCLE */}
-        <div className="absolute top-[260px] left-[400px] w-[620px] h-[620px] border border-dashed border-gray-400 rounded-full" />
+        <div className="absolute top-[370px] left-[400px] w-[620px] h-[620px] border border-dashed border-gray-400 rounded-full" />
 
         {/* UI DESIGN */}
         {(() => {
@@ -42,7 +42,7 @@ export default function CirclularServices() {
               className="mt-4 absolute w-[370px] h-[230px] bg-white rounded-xl border p-6 shadow-sm"
               style={{
                 left: centerX + radius * Math.cos(rad) - 360,
-                top: centerY + radius * Math.sin(rad) - 30,
+                top: centerY + radius * Math.sin(rad) +70,
               }}
             >
               <h3 className="font-semibold text-[18px] mb-2">UI Design</h3>
@@ -76,7 +76,7 @@ export default function CirclularServices() {
               className="absolute mt-4  w-[370px] h-[230px] bg-white rounded-xl border p-6 shadow-sm"
               style={{
                 left: centerX + radius * Math.cos(rad) - 80,
-                top: centerY + radius * Math.sin(rad) - 310,
+                top: centerY + radius * Math.sin(rad) - 215,
               }}
             >
               <h3 className="font-semibold text-[18px] mb-2">
@@ -106,7 +106,7 @@ export default function CirclularServices() {
               className="absolute w-[300px] h-[240px] bg-white rounded-xl border p-6 shadow-sm"
               style={{
                 left: centerX + radius * Math.cos(rad) + 400,
-                top: centerY + radius * Math.sin(rad) - 220,
+                top: centerY + radius * Math.sin(rad) - 130,
               }}
             >
               <h3 className="font-semibold text-[18px] mb-2">Data Analyst</h3>
@@ -138,7 +138,7 @@ export default function CirclularServices() {
               className="absolute w-[340px] bg-white rounded-xl border p-6 shadow-sm"
               style={{
                 left: centerX + radius * Math.cos(rad) - 65,
-                top: centerY + radius * Math.sin(rad) -20,
+                top: centerY + radius * Math.sin(rad) +80,
               }}
             >
               <h3 className="font-semibold text-[18px] mb-2">Poster Design</h3>
@@ -171,7 +171,7 @@ export default function CirclularServices() {
               className="absolute   w-[300px] h-[240px] bg-white rounded-xl border p-6 shadow-sm"
               style={{
                 left: centerX + radius * Math.cos(rad) - 5,
-                top: centerY + radius * Math.sin(rad) - 24,
+                top: centerY + radius * Math.sin(rad) +74,
               }}
             >
               <h3 className="font-semibold text-[18px] mb-2">Graphic Design</h3>
